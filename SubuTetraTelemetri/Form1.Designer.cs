@@ -1,6 +1,6 @@
 ﻿namespace SubuTetraTelemetri
 {
-    partial class motorSicakligiLabel
+    partial class Form1
     {
         /// <summary>
         ///  Required designer variable.
@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -135,9 +136,12 @@
             this.label62 = new System.Windows.Forms.Label();
             this.label63 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.label37 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // timer1
@@ -1079,7 +1083,7 @@
             this.groupBox2.Size = new System.Drawing.Size(207, 376);
             this.groupBox2.TabIndex = 15;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Sıcaklık Sensörleri";
+            this.groupBox2.Text = "Batarya Sıcaklıkları";
             // 
             // label31
             // 
@@ -1322,9 +1326,32 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Batarya ve Motor Verileri";
             // 
-            // motorSicakligiLabel
+            // label37
             // 
+            this.label37.AutoSize = true;
+            this.label37.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label37.Location = new System.Drawing.Point(351, 635);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(588, 37);
+            this.label37.TabIndex = 24;
+            this.label37.Text = "SUBÜ TETRA 2020. TÜM HAKLARI SAKLIDIR.";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(388, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(166, 173);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 25;
+            this.pictureBox1.TabStop = false;
+            // 
+            // Form1
+            // 
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.label37);
             this.Controls.Add(this.label63);
             this.Controls.Add(this.label62);
             this.Controls.Add(this.socDataLabel);
@@ -1352,7 +1379,7 @@
             this.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "motorSicakligiLabel";
+            this.Name = "Form1";
             this.Text = "SUBÜ TETRA TELEMETRE 2020";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
@@ -1361,6 +1388,7 @@
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1473,6 +1501,8 @@
         private System.Windows.Forms.Label label62;
         private System.Windows.Forms.Label label63;
         private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.Label label37;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 

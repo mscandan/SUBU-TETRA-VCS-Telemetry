@@ -27,7 +27,7 @@ using System.IO.Ports;
 
 namespace SubuTetraTelemetri
 {
-    public partial class motorSicakligiLabel : Form
+    public partial class Form1 : Form
     {
         /* Değişken tanımlamaları */
         SerialPort port = new SerialPort(); // Okuma yapılacak port'un tanımlanması (https://docs.microsoft.com/en-us/dotnet/api/system.io.ports.serialport?view=dotnet-plat-ext-3.1) konfirüsayonu daha sonra yapılıyor -> PortKonf()
@@ -142,7 +142,7 @@ namespace SubuTetraTelemetri
             double deger = decimalDeger / 50.0;
             return deger;
         }
-        public motorSicakligiLabel()
+        public Form1()
         {
             InitializeComponent();
         }
