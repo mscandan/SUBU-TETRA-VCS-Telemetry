@@ -23,6 +23,7 @@ using System.Globalization;
 using OfficeOpenXml; // Excel Log kısmında kullanılan kütüphane
 using System.IO; // Port kullanımı için gerekli olan kütüphane
 using System.IO.Ports;
+using System.Net;
 /* Ek kütüphane tanımlamaları tamamlandı*/
 
 namespace SubuTetraTelemetri
