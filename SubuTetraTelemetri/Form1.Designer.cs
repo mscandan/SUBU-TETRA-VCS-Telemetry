@@ -1,6 +1,6 @@
 ﻿namespace SubuTetraTelemetri
 {
-    partial class Form1
+    partial class motorSicakligiLabel
     {
         /// <summary>
         ///  Required designer variable.
@@ -116,10 +116,25 @@
             this.hizLabel = new System.Windows.Forms.Label();
             this.label32 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.alinanYolLabel = new System.Windows.Forms.Label();
+            this.label35 = new System.Windows.Forms.Label();
+            this.label33 = new System.Windows.Forms.Label();
             this.excelDosyaYoluTextBox = new System.Windows.Forms.TextBox();
             this.excelKaydiCheck = new System.Windows.Forms.CheckBox();
             this.excelDosyaButton = new System.Windows.Forms.Button();
-            this.dataLog = new System.Windows.Forms.TextBox();
+            this.SoCLabel = new System.Windows.Forms.Label();
+            this.SoHLabel = new System.Windows.Forms.Label();
+            this.label34 = new System.Windows.Forms.Label();
+            this.label36 = new System.Windows.Forms.Label();
+            this.motorGerilimiLabel = new System.Windows.Forms.Label();
+            this.label38 = new System.Windows.Forms.Label();
+            this.motorSicakligiDataLabel = new System.Windows.Forms.Label();
+            this.label39 = new System.Windows.Forms.Label();
+            this.sohDataLabel = new System.Windows.Forms.Label();
+            this.socDataLabel = new System.Windows.Forms.Label();
+            this.label62 = new System.Windows.Forms.Label();
+            this.label63 = new System.Windows.Forms.Label();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -1059,7 +1074,7 @@
             this.groupBox2.Controls.Add(this.label22);
             this.groupBox2.Controls.Add(this.label21);
             this.groupBox2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.groupBox2.Location = new System.Drawing.Point(409, 201);
+            this.groupBox2.Location = new System.Drawing.Point(361, 202);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(207, 376);
             this.groupBox2.TabIndex = 15;
@@ -1070,7 +1085,7 @@
             // 
             this.label31.AutoSize = true;
             this.label31.Font = new System.Drawing.Font("Segoe UI", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label31.Location = new System.Drawing.Point(115, 73);
+            this.label31.Location = new System.Drawing.Point(117, 57);
             this.label31.Name = "label31";
             this.label31.Size = new System.Drawing.Size(109, 65);
             this.label31.TabIndex = 15;
@@ -1080,7 +1095,7 @@
             // 
             this.hizLabel.AutoSize = true;
             this.hizLabel.Font = new System.Drawing.Font("Segoe UI", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.hizLabel.Location = new System.Drawing.Point(60, 168);
+            this.hizLabel.Location = new System.Drawing.Point(62, 132);
             this.hizLabel.Name = "hizLabel";
             this.hizLabel.Size = new System.Drawing.Size(42, 50);
             this.hizLabel.TabIndex = 16;
@@ -1090,7 +1105,7 @@
             // 
             this.label32.AutoSize = true;
             this.label32.Font = new System.Drawing.Font("Segoe UI", 27.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
-            this.label32.Location = new System.Drawing.Point(195, 167);
+            this.label32.Location = new System.Drawing.Point(195, 132);
             this.label32.Name = "label32";
             this.label32.Size = new System.Drawing.Size(115, 50);
             this.label32.TabIndex = 17;
@@ -1098,16 +1113,49 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.alinanYolLabel);
+            this.groupBox3.Controls.Add(this.label35);
+            this.groupBox3.Controls.Add(this.label33);
             this.groupBox3.Controls.Add(this.label32);
             this.groupBox3.Controls.Add(this.hizLabel);
             this.groupBox3.Controls.Add(this.label31);
-            this.groupBox3.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.groupBox3.Location = new System.Drawing.Point(802, 207);
+            this.groupBox3.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.groupBox3.Location = new System.Drawing.Point(574, 201);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(345, 369);
+            this.groupBox3.Size = new System.Drawing.Size(345, 377);
             this.groupBox3.TabIndex = 18;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Hız Verileri";
+            // 
+            // alinanYolLabel
+            // 
+            this.alinanYolLabel.AutoSize = true;
+            this.alinanYolLabel.Font = new System.Drawing.Font("Segoe UI", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.alinanYolLabel.Location = new System.Drawing.Point(71, 273);
+            this.alinanYolLabel.Name = "alinanYolLabel";
+            this.alinanYolLabel.Size = new System.Drawing.Size(42, 50);
+            this.alinanYolLabel.TabIndex = 16;
+            this.alinanYolLabel.Text = "0";
+            // 
+            // label35
+            // 
+            this.label35.AutoSize = true;
+            this.label35.Font = new System.Drawing.Font("Segoe UI", 27.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
+            this.label35.Location = new System.Drawing.Point(195, 273);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(74, 50);
+            this.label35.TabIndex = 17;
+            this.label35.Text = "KM";
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.label33.Location = new System.Drawing.Point(126, 227);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(100, 25);
+            this.label33.TabIndex = 18;
+            this.label33.Text = "Alınan Yol";
             // 
             // excelDosyaYoluTextBox
             // 
@@ -1139,19 +1187,156 @@
             this.excelDosyaButton.UseVisualStyleBackColor = true;
             this.excelDosyaButton.Click += new System.EventHandler(this.excelDosyaButton_Click);
             // 
-            // dataLog
+            // SoCLabel
             // 
-            this.dataLog.Location = new System.Drawing.Point(409, 106);
-            this.dataLog.Multiline = true;
-            this.dataLog.Name = "dataLog";
-            this.dataLog.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.dataLog.Size = new System.Drawing.Size(803, 79);
-            this.dataLog.TabIndex = 22;
+            this.SoCLabel.AutoSize = true;
+            this.SoCLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.SoCLabel.Location = new System.Drawing.Point(960, 255);
+            this.SoCLabel.Name = "SoCLabel";
+            this.SoCLabel.Size = new System.Drawing.Size(127, 21);
+            this.SoCLabel.TabIndex = 22;
+            this.SoCLabel.Text = "State of Charge";
             // 
-            // Form1
+            // SoHLabel
+            // 
+            this.SoHLabel.AutoSize = true;
+            this.SoHLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.SoHLabel.Location = new System.Drawing.Point(960, 326);
+            this.SoHLabel.Name = "SoHLabel";
+            this.SoHLabel.Size = new System.Drawing.Size(124, 21);
+            this.SoHLabel.TabIndex = 22;
+            this.SoHLabel.Text = "State of Health";
+            // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label34.Location = new System.Drawing.Point(960, 395);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(122, 21);
+            this.label34.TabIndex = 22;
+            this.label34.Text = "Motor Gerilimi";
+            // 
+            // label36
+            // 
+            this.label36.AutoSize = true;
+            this.label36.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label36.Location = new System.Drawing.Point(960, 465);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(126, 21);
+            this.label36.TabIndex = 22;
+            this.label36.Text = "Motor Sıcaklığı";
+            // 
+            // motorGerilimiLabel
+            // 
+            this.motorGerilimiLabel.AutoSize = true;
+            this.motorGerilimiLabel.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
+            this.motorGerilimiLabel.Location = new System.Drawing.Point(1116, 391);
+            this.motorGerilimiLabel.Margin = new System.Windows.Forms.Padding(3);
+            this.motorGerilimiLabel.Name = "motorGerilimiLabel";
+            this.motorGerilimiLabel.Size = new System.Drawing.Size(22, 25);
+            this.motorGerilimiLabel.TabIndex = 5;
+            this.motorGerilimiLabel.Text = "0";
+            // 
+            // label38
+            // 
+            this.label38.AutoSize = true;
+            this.label38.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label38.Location = new System.Drawing.Point(1188, 391);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(24, 25);
+            this.label38.TabIndex = 6;
+            this.label38.Text = "V";
+            // 
+            // motorSicakligiDataLabel
+            // 
+            this.motorSicakligiDataLabel.AutoSize = true;
+            this.motorSicakligiDataLabel.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
+            this.motorSicakligiDataLabel.Location = new System.Drawing.Point(1116, 461);
+            this.motorSicakligiDataLabel.Margin = new System.Windows.Forms.Padding(3);
+            this.motorSicakligiDataLabel.Name = "motorSicakligiDataLabel";
+            this.motorSicakligiDataLabel.Size = new System.Drawing.Size(22, 25);
+            this.motorSicakligiDataLabel.TabIndex = 5;
+            this.motorSicakligiDataLabel.Text = "0";
+            // 
+            // label39
+            // 
+            this.label39.AutoSize = true;
+            this.label39.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label39.Location = new System.Drawing.Point(1181, 461);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(31, 25);
+            this.label39.TabIndex = 14;
+            this.label39.Text = "°C";
+            // 
+            // sohDataLabel
+            // 
+            this.sohDataLabel.AutoSize = true;
+            this.sohDataLabel.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
+            this.sohDataLabel.Location = new System.Drawing.Point(1116, 322);
+            this.sohDataLabel.Margin = new System.Windows.Forms.Padding(3);
+            this.sohDataLabel.Name = "sohDataLabel";
+            this.sohDataLabel.Size = new System.Drawing.Size(22, 25);
+            this.sohDataLabel.TabIndex = 5;
+            this.sohDataLabel.Text = "0";
+            // 
+            // socDataLabel
+            // 
+            this.socDataLabel.AutoSize = true;
+            this.socDataLabel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.socDataLabel.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
+            this.socDataLabel.Location = new System.Drawing.Point(1116, 252);
+            this.socDataLabel.Margin = new System.Windows.Forms.Padding(3);
+            this.socDataLabel.Name = "socDataLabel";
+            this.socDataLabel.Size = new System.Drawing.Size(22, 25);
+            this.socDataLabel.TabIndex = 5;
+            this.socDataLabel.Text = "0";
+            // 
+            // label62
+            // 
+            this.label62.AutoSize = true;
+            this.label62.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label62.Location = new System.Drawing.Point(1188, 322);
+            this.label62.Name = "label62";
+            this.label62.Size = new System.Drawing.Size(28, 25);
+            this.label62.TabIndex = 6;
+            this.label62.Text = "%";
+            // 
+            // label63
+            // 
+            this.label63.AutoSize = true;
+            this.label63.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label63.Location = new System.Drawing.Point(1188, 252);
+            this.label63.Name = "label63";
+            this.label63.Size = new System.Drawing.Size(28, 25);
+            this.label63.TabIndex = 6;
+            this.label63.Text = "%";
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.groupBox4.Location = new System.Drawing.Point(925, 202);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(327, 376);
+            this.groupBox4.TabIndex = 23;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Batarya ve Motor Verileri";
+            // 
+            // motorSicakligiLabel
             // 
             this.ClientSize = new System.Drawing.Size(1264, 681);
-            this.Controls.Add(this.dataLog);
+            this.Controls.Add(this.label63);
+            this.Controls.Add(this.label62);
+            this.Controls.Add(this.socDataLabel);
+            this.Controls.Add(this.sohDataLabel);
+            this.Controls.Add(this.label39);
+            this.Controls.Add(this.motorSicakligiDataLabel);
+            this.Controls.Add(this.label38);
+            this.Controls.Add(this.motorGerilimiLabel);
+            this.Controls.Add(this.label36);
+            this.Controls.Add(this.label34);
+            this.Controls.Add(this.SoHLabel);
+            this.Controls.Add(this.SoCLabel);
             this.Controls.Add(this.excelDosyaButton);
             this.Controls.Add(this.excelKaydiCheck);
             this.Controls.Add(this.excelDosyaYoluTextBox);
@@ -1163,9 +1348,11 @@
             this.Controls.Add(this.portBaglanButton);
             this.Controls.Add(this.baudrateTextBox);
             this.Controls.Add(this.portListCombo);
+            this.Controls.Add(this.groupBox4);
+            this.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "Form1";
+            this.Name = "motorSicakligiLabel";
             this.Text = "SUBÜ TETRA TELEMETRE 2020";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
@@ -1270,7 +1457,22 @@
         private System.Windows.Forms.TextBox excelDosyaYoluTextBox;
         private System.Windows.Forms.CheckBox excelKaydiCheck;
         private System.Windows.Forms.Button excelDosyaButton;
-        private System.Windows.Forms.TextBox dataLog;
+        private System.Windows.Forms.Label label33;
+        private System.Windows.Forms.Label alinanYolLabel;
+        private System.Windows.Forms.Label label35;
+        private System.Windows.Forms.Label SoCLabel;
+        private System.Windows.Forms.Label SoHLabel;
+        private System.Windows.Forms.Label label34;
+        private System.Windows.Forms.Label label36;
+        private System.Windows.Forms.Label motorGerilimiLabel;
+        private System.Windows.Forms.Label label38;
+        private System.Windows.Forms.Label motorSicakligiDataLabel;
+        private System.Windows.Forms.Label label39;
+        private System.Windows.Forms.Label sohDataLabel;
+        private System.Windows.Forms.Label socDataLabel;
+        private System.Windows.Forms.Label label62;
+        private System.Windows.Forms.Label label63;
+        private System.Windows.Forms.GroupBox groupBox4;
     }
 }
 

@@ -27,7 +27,7 @@ using System.IO.Ports;
 
 namespace SubuTetraTelemetri
 {
-    public partial class Form1 : Form
+    public partial class motorSicakligiLabel : Form
     {
         /* Değişken tanımlamaları */
         SerialPort port = new SerialPort(); // Okuma yapılacak port'un tanımlanması (https://docs.microsoft.com/en-us/dotnet/api/system.io.ports.serialport?view=dotnet-plat-ext-3.1) konfirüsayonu daha sonra yapılıyor -> PortKonf()
@@ -60,16 +60,9 @@ namespace SubuTetraTelemetri
         private void VeriOku(byte[] okunanHex)
         {
             okunan = BitConverter.ToString(okunanHex); // Okunan verinin byte türünden string türüne çevirilmesi
-            if(okunan == "") // Eğer veri okunamıyorsa
-            {
-                dataLog.Text += "Veri okunamıyor";
-                dataLog.Text += Environment.NewLine;
-            }
             string[] atanacakVeriler = okunan.Split("-"); // Okunan veriler arasında "-" işareti bulunuyor verileri ayırmak için "-" işaretine göre split ediyoruz ve dizide tutuyoruz
             if(atanacakVeriler.Length == 25 || atanacakVeriler.Length == 28) // Paket 1-2-4 uzunluğu 25, Paket 3 uzunluğu 28
             {
-                dataLog.Text += okunan; // okunan veriyi ekrandaki log kısmında göster
-                dataLog.Text += Environment.NewLine;
                 if (atanacakVeriler[16] == "01") // Split edilmiş verinin 16 indis numaralı öğesinde paket 1'e atadığımız ID var ID kontrol edilerek gerekli pil ve sıcaklık değerleri alınıyor
                 {
                     // pil 1 - pil 7
@@ -88,7 +81,7 @@ namespace SubuTetraTelemetri
                 }
                 if (atanacakVeriler[16] == "02") // Split edilmiş verinin 16 indis numaralı öğesinde paket 1'e atadığımız ID var ID kontrol edilerek gerekli pil ve sıcaklık değerleri alınıyor
                 {
-                    // pil 8 - pil 13
+                    // pil 8 - pil 14
                     pil8label.Text = PilDegerHesabi(atanacakVeriler[17]).ToString();
                     pil9label.Text = PilDegerHesabi(atanacakVeriler[18]).ToString();
                     pil10label.Text = PilDegerHesabi(atanacakVeriler[19]).ToString();
@@ -112,6 +105,7 @@ namespace SubuTetraTelemetri
                     pil18label.Text = PilDegerHesabi(atanacakVeriler[22]).ToString();
                     pil19label.Text = PilDegerHesabi(atanacakVeriler[24]).ToString();
                     pil20label.Text = PilDegerHesabi(atanacakVeriler[25]).ToString();
+                    motorSicakligiDataLabel.Text = atanacakVeriler[26]; 
                     if (excelKaydiCheck.Checked == true) // Kullanıcı excel kaydı yapmayı seçmişse
                     {
                         satirSayisi++; // Excel loglamasında 1 satır aşağı geçmesi gerekiyor üstüste binme olmaması için
@@ -120,18 +114,24 @@ namespace SubuTetraTelemetri
                 }
                 if (atanacakVeriler[16] == "04") // Split edilmiş verinin 16 indis numaralı öğesinde paket 1'e atadığımız ID var ID kontrol edilerek gerekli pil ve sıcaklık değerleri alınıyor
                 {
-                    // hız - sıcaklık 1 - sıcaklık 
+                    // hız - sıcaklık 1 - sıcaklık 5 - motor gerilimi
                     sicaklik1label.Text = Convert.ToInt32(atanacakVeriler[17], 16).ToString();
                     sicaklik2label.Text = Convert.ToInt32(atanacakVeriler[18], 16).ToString();
                     sicaklik3label.Text = Convert.ToInt32(atanacakVeriler[19], 16).ToString();
                     sicaklik4label.Text = Convert.ToInt32(atanacakVeriler[20], 16).ToString();
                     sicaklik5label.Text = Convert.ToInt32(atanacakVeriler[21], 16).ToString();
                     hizLabel.Text = Convert.ToInt32(atanacakVeriler[22], 16).ToString();
+                    motorGerilimiLabel.Text = atanacakVeriler[23];
                     if (excelKaydiCheck.Checked == true) // Kullanıcı excel kaydı yapmayı seçmişse
                     {
                         satirSayisi++; // Excel loglamasında 1 satır aşağı geçmesi gerekiyor üstüste binme olmaması için
                         ExcelLog(satirSayisi, atanacakVeriler, 4);
                     }
+                }
+                if(atanacakVeriler[16] == "05") // Split edilmis verinin 16 indis numarali ogesinde paket 1'e atadigimiz ID var ID kontrol gerekli batarya ve motor verilerinin degerini alir
+                {
+                    sohDataLabel.Text = atanacakVeriler[22];
+                    socDataLabel.Text = atanacakVeriler[23];
                 }
             }
         }
@@ -142,7 +142,7 @@ namespace SubuTetraTelemetri
             double deger = decimalDeger / 50.0;
             return deger;
         }
-        public Form1()
+        public motorSicakligiLabel()
         {
             InitializeComponent();
         }
