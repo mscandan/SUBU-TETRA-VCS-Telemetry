@@ -23,7 +23,7 @@ using System.Globalization;
 using OfficeOpenXml; // Excel Log kısmında kullanılan kütüphane
 using System.IO; // Port kullanımı için gerekli olan kütüphane
 using System.IO.Ports;
-using System.Net;
+using System.Diagnostics;
 /* Ek kütüphane tanımlamaları tamamlandı*/
 
 namespace SubuTetraTelemetri
@@ -62,7 +62,7 @@ namespace SubuTetraTelemetri
         {
             okunan = BitConverter.ToString(okunanHex); // Okunan verinin byte türünden string türüne çevirilmesi
             string[] atanacakVeriler = okunan.Split("-"); // Okunan veriler arasında "-" işareti bulunuyor verileri ayırmak için "-" işaretine göre split ediyoruz ve dizide tutuyoruz
-            if(atanacakVeriler.Length == 25 || atanacakVeriler.Length == 28) // Paket 1-2-4 uzunluğu 25, Paket 3 uzunluğu 28
+            if (atanacakVeriler.Length == 25 || atanacakVeriler.Length == 28) // Paket 1-2-4 uzunluğu 25, Paket 3 uzunluğu 28
             {
                 if (atanacakVeriler[16] == "01") // Split edilmiş verinin 16 indis numaralı öğesinde paket 1'e atadığımız ID var ID kontrol edilerek gerekli pil ve sıcaklık değerleri alınıyor
                 {
@@ -74,7 +74,7 @@ namespace SubuTetraTelemetri
                     pil5label.Text = PilDegerHesabi(atanacakVeriler[21]).ToString();
                     pil6label.Text = PilDegerHesabi(atanacakVeriler[22]).ToString();
                     pil7label.Text = PilDegerHesabi(atanacakVeriler[23]).ToString();
-                    if(excelKaydiCheck.Checked == true) // Kullanıcı excel kaydı yapmayı seçmişse
+                    if (excelKaydiCheck.Checked == true) // Kullanıcı excel kaydı yapmayı seçmişse
                     {
                         satirSayisi++; // Excel loglamasında 1 satır aşağı geçmesi gerekiyor üstüste binme olmaması için
                         ExcelLog(satirSayisi, atanacakVeriler, 1);
@@ -95,7 +95,7 @@ namespace SubuTetraTelemetri
                         satirSayisi++; // Excel loglamasında 1 satır aşağı geçmesi gerekiyor üstüste binme olmaması için
                         ExcelLog(satirSayisi, atanacakVeriler, 2);
                     }
-                    
+
                 }
                 if (atanacakVeriler[16] == "03") // Split edilmiş verinin 16 indis numaralı öğesinde paket 1'e atadığımız ID var ID kontrol edilerek gerekli pil ve sıcaklık değerleri alınıyor
                 {
@@ -106,7 +106,7 @@ namespace SubuTetraTelemetri
                     pil18label.Text = PilDegerHesabi(atanacakVeriler[22]).ToString();
                     pil19label.Text = PilDegerHesabi(atanacakVeriler[24]).ToString();
                     pil20label.Text = PilDegerHesabi(atanacakVeriler[25]).ToString();
-                    motorSicakligiDataLabel.Text = atanacakVeriler[26]; 
+                    motorSicakligiDataLabel.Text = atanacakVeriler[26];
                     if (excelKaydiCheck.Checked == true) // Kullanıcı excel kaydı yapmayı seçmişse
                     {
                         satirSayisi++; // Excel loglamasında 1 satır aşağı geçmesi gerekiyor üstüste binme olmaması için
@@ -129,7 +129,7 @@ namespace SubuTetraTelemetri
                         ExcelLog(satirSayisi, atanacakVeriler, 4);
                     }
                 }
-                if(atanacakVeriler[16] == "05") // Split edilmis verinin 16 indis numarali ogesinde paket 1'e atadigimiz ID var ID kontrol gerekli batarya ve motor verilerinin degerini alir
+                if (atanacakVeriler[16] == "05") // Split edilmis verinin 16 indis numarali ogesinde paket 1'e atadigimiz ID var ID kontrol gerekli batarya ve motor verilerinin degerini alir
                 {
                     sohDataLabel.Text = atanacakVeriler[22];
                     socDataLabel.Text = atanacakVeriler[23];
@@ -167,11 +167,12 @@ namespace SubuTetraTelemetri
         private void Form1_Load(object sender, EventArgs e)
         {
             PortlariListele(); // Aktif COM portlarını listele
+            timer2.Enabled = true;
         }
         // 200 ms'de bir gerçekleşecek olan veri okuma ve ayıklama işlemleri için gerekli fonksiyonların çağırılması
         private void timer1_Tick(object sender, EventArgs e)
         {
-            if(port.IsOpen == true) // Port bağlantısı yapıldıysa
+            if (port.IsOpen == true) // Port bağlantısı yapıldıysa
             {
                 baglantiDurumuLabel.Text = "Bağlantı Aktif";
                 baglantiDurumuLabel.ForeColor = Color.Green;
@@ -190,7 +191,7 @@ namespace SubuTetraTelemetri
             timer1.Enabled = false; // Timer'ın kapatılması
             portBaglanButton.Enabled = true; // Bağlanma butonunun aktif edilmesi
             portDisconnectButton.Enabled = false; // Bağlantı kesme butonunun deaktif edilmesi
-            if(excelKaydiCheck.Checked == true) // Log kaydı yapılan excel dosyasının kaydedilmesi
+            if (excelKaydiCheck.Checked == true) // Log kaydı yapılan excel dosyasının kaydedilmesi
             {
                 Stream stream = dosyaYolu.OpenFile();
                 package.SaveAs(stream);
@@ -258,7 +259,7 @@ namespace SubuTetraTelemetri
                 worksheet.Cells[satirSayisi, 7].Value = ayrilmisVeriler[22];
                 worksheet.Cells[satirSayisi, 8].Value = ayrilmisVeriler[23];
             }
-            else if(id == 2)
+            else if (id == 2)
             {
                 worksheet.Cells[satirSayisi, 9].Value = ayrilmisVeriler[17];
                 worksheet.Cells[satirSayisi, 10].Value = ayrilmisVeriler[18];
@@ -268,7 +269,7 @@ namespace SubuTetraTelemetri
                 worksheet.Cells[satirSayisi, 14].Value = ayrilmisVeriler[22];
                 worksheet.Cells[satirSayisi, 15].Value = ayrilmisVeriler[23];
             }
-            else if(id == 3)
+            else if (id == 3)
             {
                 worksheet.Cells[satirSayisi, 16].Value = ayrilmisVeriler[17];
                 worksheet.Cells[satirSayisi, 17].Value = ayrilmisVeriler[18];
@@ -276,9 +277,9 @@ namespace SubuTetraTelemetri
                 worksheet.Cells[satirSayisi, 19].Value = ayrilmisVeriler[20];
                 worksheet.Cells[satirSayisi, 20].Value = ayrilmisVeriler[21];
                 worksheet.Cells[satirSayisi, 21].Value = ayrilmisVeriler[22];
-                
+
             }
-            else 
+            else
             {
                 worksheet.Cells[satirSayisi, 22].Value = ayrilmisVeriler[17];
                 worksheet.Cells[satirSayisi, 23].Value = ayrilmisVeriler[18];
@@ -288,5 +289,38 @@ namespace SubuTetraTelemetri
                 worksheet.Cells[satirSayisi, 27].Value = ayrilmisVeriler[22];
             }
         }
-    }
+        // Elde edilen butun verilerin bir python scripti ile internete gonderilmesi
+        private void VeriGonder()
+        {
+            // Python scriptinin yazilmasi icin 
+            var psi = new ProcessStartInfo();
+            psi.FileName = @"C:/Users/mehme/AppData/Local/Microsoft/WindowsApps/python.exe"; // python runner exe
+            var script = @"..\..\..\SendData.py"; // yazdigimiz scriptin lokasyonu
+            // Okunan ve gerekli yere kaydedilen verilerin calistirilacak python scriptine verilecek olan parametre olarak duzenlenmesi
+            var veriler = "b=" + pil1label.Text + "&c=" + pil2label.Text + "&d=" + pil3label.Text + "&e=" + pil4label.Text + "&f=" + pil5label.Text + "&g=" + pil6label.Text+
+                "&h=" + pil7label.Text + "&i=" + pil8label.Text + "&j=" + pil9label.Text + "&k=" + pil10label.Text + "&l=" + pil11label.Text + "&m=" + pil12label.Text + 
+                "&n=" + pil13label.Text + "&o=" + pil14label.Text + "&p=" + pil15label.Text + "&q=" + pil16label.Text + "&r=" + pil17label.Text + "&s=" + pil18label.Text +
+                "&t=" + pil19label.Text + "&u=" + pil20label.Text + "&v=" + sicaklik1label.Text + "&w=" + sicaklik2label.Text + "&x=" + sicaklik3label.Text +
+                "&y=" + sicaklik4label.Text + "&z=" + sicaklik5label.Text + "&z2=" + hizLabel.Text;
+
+            psi.Arguments = $"\"{script}\" \"{veriler}\""; // Python scriptini calistirmak icin script yolunu ve argumanlarimizi veriyoruz
+            psi.UseShellExecute = false; // shell execute kapatma
+            psi.CreateNoWindow = true; // yeni bir pencere yaratma
+            psi.RedirectStandardOutput = true; // standart outputu aktar
+            psi.RedirectStandardError = true; // standart erroru aktar
+            var errors = ""; // script calisirken bir error gelirse
+            var results = ""; // script calistiktan sonra dondurdugu deger
+            // Konfigurasyon tamamlandi
+            using (var process = Process.Start(psi)) // scripti calistir
+            {
+                errors = process.StandardError.ReadToEnd(); // error varsa degiskene aktar
+                results = process.StandardOutput.ReadToEnd(); // sonuclari degiskene aktar
+            }
+        }
+        // Her 1 saniyede 1 internete veri gonderecek olan timerin calismasi
+        private void timer2_Tick(object sender, EventArgs e)
+        {
+            VeriGonder();
+        }
+    } 
 }
