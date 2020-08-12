@@ -301,7 +301,8 @@ namespace SubuTetraTelemetri
                 "&h=" + pil7label.Text + "&i=" + pil8label.Text + "&j=" + pil9label.Text + "&k=" + pil10label.Text + "&l=" + pil11label.Text + "&m=" + pil12label.Text + 
                 "&n=" + pil13label.Text + "&o=" + pil14label.Text + "&p=" + pil15label.Text + "&q=" + pil16label.Text + "&r=" + pil17label.Text + "&s=" + pil18label.Text +
                 "&t=" + pil19label.Text + "&u=" + pil20label.Text + "&v=" + sicaklik1label.Text + "&w=" + sicaklik2label.Text + "&x=" + sicaklik3label.Text +
-                "&y=" + sicaklik4label.Text + "&z=" + sicaklik5label.Text + "&z2=" + hizLabel.Text;
+                "&y=" + sicaklik4label.Text + "&z=" + sicaklik5label.Text + "&z2=" + hizLabel.Text + "&z3=" + alinanYolLabel.Text + 
+                "&z4=" + socDataLabel.Text + "&z5=" + sohDataLabel.Text + "&z6=" + motorGerilimiLabel.Text + "&z7=" + motorSicakligiDataLabel.Text;
 
             psi.Arguments = $"\"{script}\" \"{veriler}\""; // Python scriptini calistirmak icin script yolunu ve argumanlarimizi veriyoruz
             psi.UseShellExecute = false; // shell execute kapatma

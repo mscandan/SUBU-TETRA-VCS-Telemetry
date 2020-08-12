@@ -377,9 +377,9 @@
             this.pil1label.Location = new System.Drawing.Point(84, 27);
             this.pil1label.Margin = new System.Windows.Forms.Padding(3);
             this.pil1label.Name = "pil1label";
-            this.pil1label.Size = new System.Drawing.Size(19, 21);
+            this.pil1label.Size = new System.Drawing.Size(40, 21);
             this.pil1label.TabIndex = 5;
-            this.pil1label.Text = "0";
+            this.pil1label.Text = "2.56";
             // 
             // pil2label
             // 
@@ -388,9 +388,9 @@
             this.pil2label.Location = new System.Drawing.Point(84, 62);
             this.pil2label.Margin = new System.Windows.Forms.Padding(3);
             this.pil2label.Name = "pil2label";
-            this.pil2label.Size = new System.Drawing.Size(19, 21);
+            this.pil2label.Size = new System.Drawing.Size(40, 21);
             this.pil2label.TabIndex = 5;
-            this.pil2label.Text = "0";
+            this.pil2label.Text = "2.56";
             // 
             // pil3label
             // 
@@ -399,9 +399,9 @@
             this.pil3label.Location = new System.Drawing.Point(84, 97);
             this.pil3label.Margin = new System.Windows.Forms.Padding(3);
             this.pil3label.Name = "pil3label";
-            this.pil3label.Size = new System.Drawing.Size(19, 21);
+            this.pil3label.Size = new System.Drawing.Size(40, 21);
             this.pil3label.TabIndex = 5;
-            this.pil3label.Text = "0";
+            this.pil3label.Text = "2.58";
             // 
             // pil4label
             // 
@@ -410,9 +410,9 @@
             this.pil4label.Location = new System.Drawing.Point(84, 132);
             this.pil4label.Margin = new System.Windows.Forms.Padding(3);
             this.pil4label.Name = "pil4label";
-            this.pil4label.Size = new System.Drawing.Size(19, 21);
+            this.pil4label.Size = new System.Drawing.Size(40, 21);
             this.pil4label.TabIndex = 5;
-            this.pil4label.Text = "0";
+            this.pil4label.Text = "2.56";
             // 
             // pil5label
             // 
@@ -421,9 +421,9 @@
             this.pil5label.Location = new System.Drawing.Point(84, 167);
             this.pil5label.Margin = new System.Windows.Forms.Padding(3);
             this.pil5label.Name = "pil5label";
-            this.pil5label.Size = new System.Drawing.Size(19, 21);
+            this.pil5label.Size = new System.Drawing.Size(40, 21);
             this.pil5label.TabIndex = 5;
-            this.pil5label.Text = "0";
+            this.pil5label.Text = "2.56";
             // 
             // pil6label
             // 
@@ -432,9 +432,9 @@
             this.pil6label.Location = new System.Drawing.Point(84, 202);
             this.pil6label.Margin = new System.Windows.Forms.Padding(3);
             this.pil6label.Name = "pil6label";
-            this.pil6label.Size = new System.Drawing.Size(19, 21);
+            this.pil6label.Size = new System.Drawing.Size(40, 21);
             this.pil6label.TabIndex = 5;
-            this.pil6label.Text = "0";
+            this.pil6label.Text = "2.54";
             // 
             // pil7label
             // 
@@ -443,9 +443,9 @@
             this.pil7label.Location = new System.Drawing.Point(84, 237);
             this.pil7label.Margin = new System.Windows.Forms.Padding(3);
             this.pil7label.Name = "pil7label";
-            this.pil7label.Size = new System.Drawing.Size(19, 21);
+            this.pil7label.Size = new System.Drawing.Size(40, 21);
             this.pil7label.TabIndex = 5;
-            this.pil7label.Text = "0";
+            this.pil7label.Text = "2.54";
             // 
             // pil8label
             // 
@@ -454,9 +454,9 @@
             this.pil8label.Location = new System.Drawing.Point(84, 272);
             this.pil8label.Margin = new System.Windows.Forms.Padding(3);
             this.pil8label.Name = "pil8label";
-            this.pil8label.Size = new System.Drawing.Size(19, 21);
+            this.pil8label.Size = new System.Drawing.Size(40, 21);
             this.pil8label.TabIndex = 5;
-            this.pil8label.Text = "0";
+            this.pil8label.Text = "2.54";
             // 
             // pil9label
             // 
@@ -465,9 +465,9 @@
             this.pil9label.Location = new System.Drawing.Point(84, 307);
             this.pil9label.Margin = new System.Windows.Forms.Padding(3);
             this.pil9label.Name = "pil9label";
-            this.pil9label.Size = new System.Drawing.Size(19, 21);
+            this.pil9label.Size = new System.Drawing.Size(40, 21);
             this.pil9label.TabIndex = 5;
-            this.pil9label.Text = "0";
+            this.pil9label.Text = "2.54";
             // 
             // pil10label
             // 
@@ -476,9 +476,9 @@
             this.pil10label.Location = new System.Drawing.Point(84, 342);
             this.pil10label.Margin = new System.Windows.Forms.Padding(3);
             this.pil10label.Name = "pil10label";
-            this.pil10label.Size = new System.Drawing.Size(19, 21);
+            this.pil10label.Size = new System.Drawing.Size(40, 21);
             this.pil10label.TabIndex = 5;
-            this.pil10label.Text = "0";
+            this.pil10label.Text = "2.54";
             // 
             // pil20label
             // 
@@ -487,9 +487,9 @@
             this.pil20label.Location = new System.Drawing.Point(238, 342);
             this.pil20label.Margin = new System.Windows.Forms.Padding(3);
             this.pil20label.Name = "pil20label";
-            this.pil20label.Size = new System.Drawing.Size(19, 21);
+            this.pil20label.Size = new System.Drawing.Size(40, 21);
             this.pil20label.TabIndex = 5;
-            this.pil20label.Text = "0";
+            this.pil20label.Text = "2.54";
             // 
             // pil19label
             // 
@@ -498,9 +498,9 @@
             this.pil19label.Location = new System.Drawing.Point(238, 307);
             this.pil19label.Margin = new System.Windows.Forms.Padding(3);
             this.pil19label.Name = "pil19label";
-            this.pil19label.Size = new System.Drawing.Size(19, 21);
+            this.pil19label.Size = new System.Drawing.Size(40, 21);
             this.pil19label.TabIndex = 5;
-            this.pil19label.Text = "0";
+            this.pil19label.Text = "2.54";
             // 
             // pil18label
             // 
@@ -509,9 +509,9 @@
             this.pil18label.Location = new System.Drawing.Point(238, 272);
             this.pil18label.Margin = new System.Windows.Forms.Padding(3);
             this.pil18label.Name = "pil18label";
-            this.pil18label.Size = new System.Drawing.Size(19, 21);
+            this.pil18label.Size = new System.Drawing.Size(40, 21);
             this.pil18label.TabIndex = 5;
-            this.pil18label.Text = "0";
+            this.pil18label.Text = "2.52";
             // 
             // pil17label
             // 
@@ -520,9 +520,9 @@
             this.pil17label.Location = new System.Drawing.Point(238, 237);
             this.pil17label.Margin = new System.Windows.Forms.Padding(3);
             this.pil17label.Name = "pil17label";
-            this.pil17label.Size = new System.Drawing.Size(19, 21);
+            this.pil17label.Size = new System.Drawing.Size(40, 21);
             this.pil17label.TabIndex = 5;
-            this.pil17label.Text = "0";
+            this.pil17label.Text = "2.52";
             // 
             // pil16label
             // 
@@ -531,9 +531,9 @@
             this.pil16label.Location = new System.Drawing.Point(238, 202);
             this.pil16label.Margin = new System.Windows.Forms.Padding(3);
             this.pil16label.Name = "pil16label";
-            this.pil16label.Size = new System.Drawing.Size(19, 21);
+            this.pil16label.Size = new System.Drawing.Size(40, 21);
             this.pil16label.TabIndex = 5;
-            this.pil16label.Text = "0";
+            this.pil16label.Text = "2.52";
             // 
             // pil15label
             // 
@@ -542,9 +542,9 @@
             this.pil15label.Location = new System.Drawing.Point(238, 167);
             this.pil15label.Margin = new System.Windows.Forms.Padding(3);
             this.pil15label.Name = "pil15label";
-            this.pil15label.Size = new System.Drawing.Size(19, 21);
+            this.pil15label.Size = new System.Drawing.Size(40, 21);
             this.pil15label.TabIndex = 5;
-            this.pil15label.Text = "0";
+            this.pil15label.Text = "2.54";
             // 
             // pil14label
             // 
@@ -553,9 +553,9 @@
             this.pil14label.Location = new System.Drawing.Point(238, 132);
             this.pil14label.Margin = new System.Windows.Forms.Padding(3);
             this.pil14label.Name = "pil14label";
-            this.pil14label.Size = new System.Drawing.Size(19, 21);
+            this.pil14label.Size = new System.Drawing.Size(40, 21);
             this.pil14label.TabIndex = 5;
-            this.pil14label.Text = "0";
+            this.pil14label.Text = "2.54";
             // 
             // pil13label
             // 
@@ -564,9 +564,9 @@
             this.pil13label.Location = new System.Drawing.Point(238, 98);
             this.pil13label.Margin = new System.Windows.Forms.Padding(3);
             this.pil13label.Name = "pil13label";
-            this.pil13label.Size = new System.Drawing.Size(19, 21);
+            this.pil13label.Size = new System.Drawing.Size(40, 21);
             this.pil13label.TabIndex = 5;
-            this.pil13label.Text = "0";
+            this.pil13label.Text = "2.54";
             // 
             // pil12label
             // 
@@ -575,9 +575,9 @@
             this.pil12label.Location = new System.Drawing.Point(238, 63);
             this.pil12label.Margin = new System.Windows.Forms.Padding(3);
             this.pil12label.Name = "pil12label";
-            this.pil12label.Size = new System.Drawing.Size(19, 21);
+            this.pil12label.Size = new System.Drawing.Size(40, 21);
             this.pil12label.TabIndex = 5;
-            this.pil12label.Text = "0";
+            this.pil12label.Text = "2.54";
             // 
             // pil11label
             // 
@@ -586,9 +586,9 @@
             this.pil11label.Location = new System.Drawing.Point(238, 27);
             this.pil11label.Margin = new System.Windows.Forms.Padding(3);
             this.pil11label.Name = "pil11label";
-            this.pil11label.Size = new System.Drawing.Size(19, 21);
+            this.pil11label.Size = new System.Drawing.Size(40, 21);
             this.pil11label.TabIndex = 5;
-            this.pil11label.Text = "0";
+            this.pil11label.Text = "2.54";
             // 
             // label41
             // 
@@ -967,9 +967,9 @@
             this.sicaklik1label.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
             this.sicaklik1label.Location = new System.Drawing.Point(122, 53);
             this.sicaklik1label.Name = "sicaklik1label";
-            this.sicaklik1label.Size = new System.Drawing.Size(19, 21);
+            this.sicaklik1label.Size = new System.Drawing.Size(40, 21);
             this.sicaklik1label.TabIndex = 13;
-            this.sicaklik1label.Text = "0";
+            this.sicaklik1label.Text = "33.2";
             // 
             // sicaklik2label
             // 
@@ -977,9 +977,9 @@
             this.sicaklik2label.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
             this.sicaklik2label.Location = new System.Drawing.Point(122, 123);
             this.sicaklik2label.Name = "sicaklik2label";
-            this.sicaklik2label.Size = new System.Drawing.Size(19, 21);
+            this.sicaklik2label.Size = new System.Drawing.Size(28, 21);
             this.sicaklik2label.TabIndex = 13;
-            this.sicaklik2label.Text = "0";
+            this.sicaklik2label.Text = "33";
             // 
             // sicaklik3label
             // 
@@ -987,9 +987,9 @@
             this.sicaklik3label.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
             this.sicaklik3label.Location = new System.Drawing.Point(122, 193);
             this.sicaklik3label.Name = "sicaklik3label";
-            this.sicaklik3label.Size = new System.Drawing.Size(19, 21);
+            this.sicaklik3label.Size = new System.Drawing.Size(40, 21);
             this.sicaklik3label.TabIndex = 13;
-            this.sicaklik3label.Text = "0";
+            this.sicaklik3label.Text = "33.8";
             // 
             // sicaklik4label
             // 
@@ -997,9 +997,9 @@
             this.sicaklik4label.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
             this.sicaklik4label.Location = new System.Drawing.Point(122, 263);
             this.sicaklik4label.Name = "sicaklik4label";
-            this.sicaklik4label.Size = new System.Drawing.Size(19, 21);
+            this.sicaklik4label.Size = new System.Drawing.Size(40, 21);
             this.sicaklik4label.TabIndex = 13;
-            this.sicaklik4label.Text = "0";
+            this.sicaklik4label.Text = "33.6";
             // 
             // sicaklik5label
             // 
@@ -1007,9 +1007,9 @@
             this.sicaklik5label.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
             this.sicaklik5label.Location = new System.Drawing.Point(122, 333);
             this.sicaklik5label.Name = "sicaklik5label";
-            this.sicaklik5label.Size = new System.Drawing.Size(19, 21);
+            this.sicaklik5label.Size = new System.Drawing.Size(40, 21);
             this.sicaklik5label.TabIndex = 13;
-            this.sicaklik5label.Text = "0";
+            this.sicaklik5label.Text = "33.4";
             // 
             // label26
             // 
@@ -1102,9 +1102,9 @@
             this.hizLabel.Font = new System.Drawing.Font("Segoe UI", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.hizLabel.Location = new System.Drawing.Point(62, 132);
             this.hizLabel.Name = "hizLabel";
-            this.hizLabel.Size = new System.Drawing.Size(42, 50);
+            this.hizLabel.Size = new System.Drawing.Size(62, 50);
             this.hizLabel.TabIndex = 16;
-            this.hizLabel.Text = "0";
+            this.hizLabel.Text = "21";
             // 
             // label32
             // 
@@ -1138,9 +1138,9 @@
             this.alinanYolLabel.Font = new System.Drawing.Font("Segoe UI", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.alinanYolLabel.Location = new System.Drawing.Point(71, 273);
             this.alinanYolLabel.Name = "alinanYolLabel";
-            this.alinanYolLabel.Size = new System.Drawing.Size(42, 50);
+            this.alinanYolLabel.Size = new System.Drawing.Size(70, 50);
             this.alinanYolLabel.TabIndex = 16;
-            this.alinanYolLabel.Text = "0";
+            this.alinanYolLabel.Text = "1.1";
             // 
             // label35
             // 
@@ -1281,9 +1281,9 @@
             this.sohDataLabel.Location = new System.Drawing.Point(1116, 322);
             this.sohDataLabel.Margin = new System.Windows.Forms.Padding(3);
             this.sohDataLabel.Name = "sohDataLabel";
-            this.sohDataLabel.Size = new System.Drawing.Size(22, 25);
+            this.sohDataLabel.Size = new System.Drawing.Size(32, 25);
             this.sohDataLabel.TabIndex = 5;
-            this.sohDataLabel.Text = "0";
+            this.sohDataLabel.Text = "95";
             // 
             // socDataLabel
             // 
@@ -1293,9 +1293,9 @@
             this.socDataLabel.Location = new System.Drawing.Point(1116, 252);
             this.socDataLabel.Margin = new System.Windows.Forms.Padding(3);
             this.socDataLabel.Name = "socDataLabel";
-            this.socDataLabel.Size = new System.Drawing.Size(22, 25);
+            this.socDataLabel.Size = new System.Drawing.Size(32, 25);
             this.socDataLabel.TabIndex = 5;
-            this.socDataLabel.Text = "0";
+            this.socDataLabel.Text = "93";
             // 
             // label62
             // 
