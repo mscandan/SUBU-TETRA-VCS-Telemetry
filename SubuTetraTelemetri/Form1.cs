@@ -73,12 +73,7 @@ namespace SubuTetraTelemetri
                     pil4label.Text = PilDegerHesabi(atanacakVeriler[20]).ToString();
                     pil5label.Text = PilDegerHesabi(atanacakVeriler[21]).ToString();
                     pil6label.Text = PilDegerHesabi(atanacakVeriler[22]).ToString();
-                    pil7label.Text = PilDegerHesabi(atanacakVeriler[23]).ToString();
-                    if (excelKaydiCheck.Checked == true) // Kullanıcı excel kaydı yapmayı seçmişse
-                    {
-                        satirSayisi++; // Excel loglamasında 1 satır aşağı geçmesi gerekiyor üstüste binme olmaması için
-                        ExcelLog(satirSayisi, atanacakVeriler, 1);
-                    }
+                    hizLabel.Text = Convert.ToInt32(atanacakVeriler[23], 16).ToString();
                 }
                 if (atanacakVeriler[16] == "02") // Split edilmiş verinin 16 indis numaralı öğesinde paket 1'e atadığımız ID var ID kontrol edilerek gerekli pil ve sıcaklık değerleri alınıyor
                 {
@@ -89,12 +84,7 @@ namespace SubuTetraTelemetri
                     pil11label.Text = PilDegerHesabi(atanacakVeriler[20]).ToString();
                     pil12label.Text = PilDegerHesabi(atanacakVeriler[21]).ToString();
                     pil13label.Text = PilDegerHesabi(atanacakVeriler[22]).ToString();
-                    pil14label.Text = PilDegerHesabi(atanacakVeriler[23]).ToString();
-                    if (excelKaydiCheck.Checked == true) // Kullanıcı excel kaydı yapmayı seçmişse
-                    {
-                        satirSayisi++; // Excel loglamasında 1 satır aşağı geçmesi gerekiyor üstüste binme olmaması için
-                        ExcelLog(satirSayisi, atanacakVeriler, 2);
-                    }
+                    hizLabel.Text = Convert.ToInt32(atanacakVeriler[23], 16).ToString();
 
                 }
                 if (atanacakVeriler[16] == "03") // Split edilmiş verinin 16 indis numaralı öğesinde paket 1'e atadığımız ID var ID kontrol edilerek gerekli pil ve sıcaklık değerleri alınıyor
@@ -102,16 +92,11 @@ namespace SubuTetraTelemetri
                     // pil 14 - pil 20
                     pil15label.Text = PilDegerHesabi(atanacakVeriler[17]).ToString();
                     pil16label.Text = PilDegerHesabi(atanacakVeriler[18]).ToString();
-                    pil17label.Text = PilDegerHesabi(atanacakVeriler[20]).ToString();
-                    pil18label.Text = PilDegerHesabi(atanacakVeriler[22]).ToString();
-                    pil19label.Text = PilDegerHesabi(atanacakVeriler[24]).ToString();
-                    pil20label.Text = PilDegerHesabi(atanacakVeriler[25]).ToString();
-                    motorSicakligiDataLabel.Text = atanacakVeriler[26];
-                    if (excelKaydiCheck.Checked == true) // Kullanıcı excel kaydı yapmayı seçmişse
-                    {
-                        satirSayisi++; // Excel loglamasında 1 satır aşağı geçmesi gerekiyor üstüste binme olmaması için
-                        ExcelLog(satirSayisi, atanacakVeriler, 3);
-                    }
+                    pil17label.Text = PilDegerHesabi(atanacakVeriler[19]).ToString();
+                    pil18label.Text = PilDegerHesabi(atanacakVeriler[20]).ToString();
+                    pil19label.Text = PilDegerHesabi(atanacakVeriler[21]).ToString();
+                    pil20label.Text = PilDegerHesabi(atanacakVeriler[22]).ToString();
+                    hizLabel.Text = Convert.ToInt32(atanacakVeriler[23], 16).ToString();
                 }
                 if (atanacakVeriler[16] == "04") // Split edilmiş verinin 16 indis numaralı öğesinde paket 1'e atadığımız ID var ID kontrol edilerek gerekli pil ve sıcaklık değerleri alınıyor
                 {
@@ -122,17 +107,22 @@ namespace SubuTetraTelemetri
                     sicaklik4label.Text = Convert.ToInt32(atanacakVeriler[20], 16).ToString();
                     sicaklik5label.Text = Convert.ToInt32(atanacakVeriler[21], 16).ToString();
                     hizLabel.Text = Convert.ToInt32(atanacakVeriler[22], 16).ToString();
-                    motorGerilimiLabel.Text = atanacakVeriler[23];
-                    if (excelKaydiCheck.Checked == true) // Kullanıcı excel kaydı yapmayı seçmişse
-                    {
-                        satirSayisi++; // Excel loglamasında 1 satır aşağı geçmesi gerekiyor üstüste binme olmaması için
-                        ExcelLog(satirSayisi, atanacakVeriler, 4);
-                    }
+                    motorGerilimiLabel.Text = Convert.ToInt32(atanacakVeriler[23], 16).ToString();
                 }
                 if (atanacakVeriler[16] == "05") // Split edilmis verinin 16 indis numarali ogesinde paket 1'e atadigimiz ID var ID kontrol gerekli batarya ve motor verilerinin degerini alir
                 {
-                    sohDataLabel.Text = atanacakVeriler[22];
-                    socDataLabel.Text = atanacakVeriler[23];
+                    pil7label.Text = PilDegerHesabi(atanacakVeriler[17]).ToString();
+                    pil14label.Text = PilDegerHesabi(atanacakVeriler[18]).ToString();
+                    motorSicakligiDataLabel.Text = Convert.ToInt32(atanacakVeriler[19], 16).ToString();
+                    hizLabel.Text = Convert.ToInt32(atanacakVeriler[20], 16).ToString();
+                    alinanYolLabel.Text = Convert.ToInt32(atanacakVeriler[21], 16).ToString();
+                    socDataLabel.Text = atanacakVeriler[22];
+                    sohDataLabel.Text = atanacakVeriler[23];
+                }
+                if (excelKaydiCheck.Checked == true) // Kullanıcı excel kaydı yapmayı seçmişse
+                {
+                    satirSayisi++; // Excel loglamasında 1 satır aşağı geçmesi gerekiyor üstüste binme olmaması için
+                    ExcelLog(satirSayisi);
                 }
             }
         }
@@ -154,6 +144,7 @@ namespace SubuTetraTelemetri
             portDisconnectButton.Enabled = true; // Disconnect butonunun aktif edilmesi
             PortKonf(); // Port konfigürasyonunu gerçekleyecek fonksiyonun çağırılması
             timer1.Enabled = true; // Programın bağlantı açık olduğu sürece sürekli çalışmasını sağlayacak timer'ın aktif edilmesi
+            timer2.Enabled = true;
             if (excelKaydiCheck.Checked == true) // Kullanıcı eğer Excel loglamasını aktif ettiyse
             {
                 ExcelPackage.LicenseContext = OfficeOpenXml.LicenseContext.NonCommercial;
@@ -167,7 +158,7 @@ namespace SubuTetraTelemetri
         private void Form1_Load(object sender, EventArgs e)
         {
             PortlariListele(); // Aktif COM portlarını listele
-            timer2.Enabled = true;
+            VeriGonder();
         }
         // 200 ms'de bir gerçekleşecek olan veri okuma ve ayıklama işlemleri için gerekli fonksiyonların çağırılması
         private void timer1_Tick(object sender, EventArgs e)
@@ -189,6 +180,7 @@ namespace SubuTetraTelemetri
         {
             port.Close(); // Port bağlantısının kapatılması
             timer1.Enabled = false; // Timer'ın kapatılması
+            timer2.Enabled = false;
             portBaglanButton.Enabled = true; // Bağlanma butonunun aktif edilmesi
             portDisconnectButton.Enabled = false; // Bağlantı kesme butonunun deaktif edilmesi
             if (excelKaydiCheck.Checked == true) // Log kaydı yapılan excel dosyasının kaydedilmesi
@@ -235,6 +227,11 @@ namespace SubuTetraTelemetri
             worksheet.Cells[1, 25].Value = "Sensor 3";
             worksheet.Cells[1, 26].Value = "Sensor 4";
             worksheet.Cells[1, 27].Value = "Sensor 5";
+            worksheet.Cells[1, 28].Value = "Alınan Yol";
+            worksheet.Cells[1, 29].Value = "SoC";
+            worksheet.Cells[1, 30].Value = "SoH";
+            worksheet.Cells[1, 31].Value = "Motor Gerilimi";
+            worksheet.Cells[1, 32].Value = "Motor Sicakligi";
         }
         // Excel log yapılacak dosyanın seçilmesi
         private void excelDosyaButton_Click(object sender, EventArgs e)
@@ -246,63 +243,56 @@ namespace SubuTetraTelemetri
             }
         }
         // Excel Loglaması yapan fonksiyon
-        private void ExcelLog(int satirSayisi, string[] ayrilmisVeriler, int id)
+        private void ExcelLog(int satirSayisi)
         {
             worksheet.Cells[satirSayisi, 1].Value = DateTime.Now.ToString(); // n. satır 1. sütuna anlık tarih ve saat atanması
-            if (id == 1)
-            {
-                worksheet.Cells[satirSayisi, 2].Value = ayrilmisVeriler[17];
-                worksheet.Cells[satirSayisi, 3].Value = ayrilmisVeriler[18];
-                worksheet.Cells[satirSayisi, 4].Value = ayrilmisVeriler[19];
-                worksheet.Cells[satirSayisi, 5].Value = ayrilmisVeriler[20];
-                worksheet.Cells[satirSayisi, 6].Value = ayrilmisVeriler[21];
-                worksheet.Cells[satirSayisi, 7].Value = ayrilmisVeriler[22];
-                worksheet.Cells[satirSayisi, 8].Value = ayrilmisVeriler[23];
-            }
-            else if (id == 2)
-            {
-                worksheet.Cells[satirSayisi, 9].Value = ayrilmisVeriler[17];
-                worksheet.Cells[satirSayisi, 10].Value = ayrilmisVeriler[18];
-                worksheet.Cells[satirSayisi, 11].Value = ayrilmisVeriler[19];
-                worksheet.Cells[satirSayisi, 12].Value = ayrilmisVeriler[20];
-                worksheet.Cells[satirSayisi, 13].Value = ayrilmisVeriler[21];
-                worksheet.Cells[satirSayisi, 14].Value = ayrilmisVeriler[22];
-                worksheet.Cells[satirSayisi, 15].Value = ayrilmisVeriler[23];
-            }
-            else if (id == 3)
-            {
-                worksheet.Cells[satirSayisi, 16].Value = ayrilmisVeriler[17];
-                worksheet.Cells[satirSayisi, 17].Value = ayrilmisVeriler[18];
-                worksheet.Cells[satirSayisi, 18].Value = ayrilmisVeriler[19];
-                worksheet.Cells[satirSayisi, 19].Value = ayrilmisVeriler[20];
-                worksheet.Cells[satirSayisi, 20].Value = ayrilmisVeriler[21];
-                worksheet.Cells[satirSayisi, 21].Value = ayrilmisVeriler[22];
-
-            }
-            else
-            {
-                worksheet.Cells[satirSayisi, 22].Value = ayrilmisVeriler[17];
-                worksheet.Cells[satirSayisi, 23].Value = ayrilmisVeriler[18];
-                worksheet.Cells[satirSayisi, 24].Value = ayrilmisVeriler[19];
-                worksheet.Cells[satirSayisi, 25].Value = ayrilmisVeriler[20];
-                worksheet.Cells[satirSayisi, 26].Value = ayrilmisVeriler[21];
-                worksheet.Cells[satirSayisi, 27].Value = ayrilmisVeriler[22];
-            }
+            worksheet.Cells[satirSayisi, 2].Value = pil1label.Text;
+            worksheet.Cells[satirSayisi, 3].Value = pil2label.Text;
+            worksheet.Cells[satirSayisi, 4].Value = pil3label.Text;
+            worksheet.Cells[satirSayisi, 5].Value = pil4label.Text;
+            worksheet.Cells[satirSayisi, 6].Value = pil5label.Text;
+            worksheet.Cells[satirSayisi, 7].Value = pil6label.Text;
+            worksheet.Cells[satirSayisi, 8].Value = pil7label.Text;
+            worksheet.Cells[satirSayisi, 9].Value = pil8label.Text;
+            worksheet.Cells[satirSayisi, 10].Value = pil9label.Text;
+            worksheet.Cells[satirSayisi, 11].Value = pil10label.Text;
+            worksheet.Cells[satirSayisi, 12].Value = pil11label.Text;
+            worksheet.Cells[satirSayisi, 13].Value = pil12label.Text;
+            worksheet.Cells[satirSayisi, 14].Value = pil13label.Text;
+            worksheet.Cells[satirSayisi, 15].Value = pil14label.Text;
+            worksheet.Cells[satirSayisi, 16].Value = pil15label.Text;
+            worksheet.Cells[satirSayisi, 17].Value = pil16label.Text;
+            worksheet.Cells[satirSayisi, 18].Value = pil17label.Text;
+            worksheet.Cells[satirSayisi, 19].Value = pil18label.Text;
+            worksheet.Cells[satirSayisi, 20].Value = pil19label.Text;
+            worksheet.Cells[satirSayisi, 21].Value = pil20label.Text;
+            worksheet.Cells[satirSayisi, 22].Value = sicaklik1label.Text;
+            worksheet.Cells[satirSayisi, 23].Value = sicaklik2label.Text;
+            worksheet.Cells[satirSayisi, 24].Value = sicaklik3label.Text;
+            worksheet.Cells[satirSayisi, 25].Value = sicaklik4label.Text;
+            worksheet.Cells[satirSayisi, 26].Value = sicaklik5label.Text;
+            worksheet.Cells[satirSayisi, 27].Value = hizLabel.Text;
+            worksheet.Cells[satirSayisi, 28].Value = alinanYolLabel.Text;
+            worksheet.Cells[satirSayisi, 29].Value = socDataLabel.Text;
+            worksheet.Cells[satirSayisi, 30].Value = sohDataLabel.Text;
+            worksheet.Cells[satirSayisi, 31].Value = motorGerilimiLabel.Text;
+            worksheet.Cells[satirSayisi, 32].Value = motorSicakligiDataLabel.Text;
+           
         }
         // Elde edilen butun verilerin bir python scripti ile internete gonderilmesi
         private void VeriGonder()
         {
             // Python scriptinin yazilmasi icin 
             var psi = new ProcessStartInfo();
-            psi.FileName = @"C:/Users/mehme/AppData/Local/Microsoft/WindowsApps/python.exe"; // python runner exe
+            psi.FileName = @"..\..\..\..\env\python.exe"; // python runner exe pythoin runner exe relative yapilmali
             var script = @"..\..\..\SendData.py"; // yazdigimiz scriptin lokasyonu
             // Okunan ve gerekli yere kaydedilen verilerin calistirilacak python scriptine verilecek olan parametre olarak duzenlenmesi
-            var veriler = "b=" + pil1label.Text + "&c=" + pil2label.Text + "&d=" + pil3label.Text + "&e=" + pil4label.Text + "&f=" + pil5label.Text + "&g=" + pil6label.Text+
-                "&h=" + pil7label.Text + "&i=" + pil8label.Text + "&j=" + pil9label.Text + "&k=" + pil10label.Text + "&l=" + pil11label.Text + "&m=" + pil12label.Text + 
-                "&n=" + pil13label.Text + "&o=" + pil14label.Text + "&p=" + pil15label.Text + "&q=" + pil16label.Text + "&r=" + pil17label.Text + "&s=" + pil18label.Text +
-                "&t=" + pil19label.Text + "&u=" + pil20label.Text + "&v=" + sicaklik1label.Text + "&w=" + sicaklik2label.Text + "&x=" + sicaklik3label.Text +
-                "&y=" + sicaklik4label.Text + "&z=" + sicaklik5label.Text + "&z2=" + hizLabel.Text + "&z3=" + alinanYolLabel.Text + 
-                "&z4=" + socDataLabel.Text + "&z5=" + sohDataLabel.Text + "&z6=" + motorGerilimiLabel.Text + "&z7=" + motorSicakligiDataLabel.Text;
+            var veriler = "a=" + pil1label.Text + "&b=" + pil2label.Text + "&c=" + pil3label.Text + "&d=" + pil4label.Text + "&e=" + pil5label.Text + "&f=" + pil6label.Text+
+                "&g=" + pil7label.Text + "&h=" + pil8label.Text + "&i=" + pil9label.Text + "&j=" + pil10label.Text + "&k=" + pil11label.Text + "&l=" + pil12label.Text + 
+                "&m=" + pil13label.Text + "&n=" + pil14label.Text + "&o=" + pil15label.Text + "&p=" + pil16label.Text + "&q=" + pil17label.Text + "&r=" + pil18label.Text +
+                "&s=" + pil19label.Text + "&t=" + pil20label.Text + "&u=" + sicaklik1label.Text + "&v=" + sicaklik2label.Text + "&w=" + sicaklik3label.Text +
+                "&x=" + sicaklik4label.Text + "&y=" + sicaklik5label.Text + "&z=" + hizLabel.Text + "&z1=" + alinanYolLabel.Text + 
+                "&z2=" + socDataLabel.Text + "&z3=" + sohDataLabel.Text + "&z4=" + motorGerilimiLabel.Text + "&z5=" + motorSicakligiDataLabel.Text;
 
             psi.Arguments = $"\"{script}\" \"{veriler}\""; // Python scriptini calistirmak icin script yolunu ve argumanlarimizi veriyoruz
             psi.UseShellExecute = false; // shell execute kapatma

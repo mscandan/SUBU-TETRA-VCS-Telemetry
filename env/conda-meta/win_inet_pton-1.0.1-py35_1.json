@@ -1,0 +1,62 @@
+{
+  "build": "py35_1",
+  "build_number": 1,
+  "channel": "https://repo.anaconda.com/pkgs/main/win-64",
+  "constrains": [],
+  "depends": [
+    "python >=3.5,<3.6.0a0"
+  ],
+  "extracted_package_dir": "C:\\Users\\mehme\\anaconda3\\pkgs\\win_inet_pton-1.0.1-py35_1",
+  "features": "",
+  "files": [
+    "Lib/site-packages/__pycache__/win_inet_pton.cpython-35.pyc",
+    "Lib/site-packages/win_inet_pton-1.0.1-py3.5.egg-info",
+    "Lib/site-packages/win_inet_pton.py",
+    ".nonadmin"
+  ],
+  "fn": "win_inet_pton-1.0.1-py35_1.conda",
+  "legacy_bz2_md5": "30d12dcc108db0c00a8af915a90bab8f",
+  "legacy_bz2_size": 5606,
+  "license": "PUBLIC-DOMAIN",
+  "link": {
+    "source": "C:\\Users\\mehme\\anaconda3\\pkgs\\win_inet_pton-1.0.1-py35_1",
+    "type": 1
+  },
+  "md5": "a98a496195c350ea14bbbcfecc1773df",
+  "name": "win_inet_pton",
+  "package_tarball_full_path": "C:\\Users\\mehme\\anaconda3\\pkgs\\win_inet_pton-1.0.1-py35_1.conda",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "Lib/site-packages/__pycache__/win_inet_pton.cpython-35.pyc",
+        "path_type": "hardlink",
+        "sha256": "6f89789825e00e3675f453e5daa0529e117076d5757811bc04bd2f5a2ea7e28b",
+        "sha256_in_prefix": "6f89789825e00e3675f453e5daa0529e117076d5757811bc04bd2f5a2ea7e28b",
+        "size_in_bytes": 2174
+      },
+      {
+        "_path": "Lib/site-packages/win_inet_pton-1.0.1-py3.5.egg-info",
+        "path_type": "hardlink",
+        "sha256": "983c1383b23db62c429068bbd7a168dd0c64d5af3b51c64dc62dcabb8782fe6b",
+        "sha256_in_prefix": "983c1383b23db62c429068bbd7a168dd0c64d5af3b51c64dc62dcabb8782fe6b",
+        "size_in_bytes": 863
+      },
+      {
+        "_path": "Lib/site-packages/win_inet_pton.py",
+        "path_type": "hardlink",
+        "sha256": "6974f19756177ef0469def4fa4b2f495ee8a8c08012fdcafd2004b129c1fd84b",
+        "sha256_in_prefix": "6974f19756177ef0469def4fa4b2f495ee8a8c08012fdcafd2004b129c1fd84b",
+        "size_in_bytes": 2753
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "e48dc75a12b4d4bda261fcc159c168bff8371d2427f2742efe90aa9305569d48",
+  "size": 6115,
+  "subdir": "win-64",
+  "timestamp": 1534351349301,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/win-64/win_inet_pton-1.0.1-py35_1.conda",
+  "version": "1.0.1"
+}
