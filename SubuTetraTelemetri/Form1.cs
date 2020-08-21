@@ -33,6 +33,7 @@ namespace SubuTetraTelemetri
         /* Değişken tanımlamaları */
         SerialPort port = new SerialPort(); // Okuma yapılacak port'un tanımlanması (https://docs.microsoft.com/en-us/dotnet/api/system.io.ports.serialport?view=dotnet-plat-ext-3.1) konfirüsayonu daha sonra yapılıyor -> PortKonf()
         string okunan; // Seri porta yazılan bilgileri okuyup kaydedilen bilgi -> VeriOku()
+        int intVeri = 0;
         /* Excel loglaması için gerekli olan değişken tanımlamaları  -> https://github.com/EPPlusSoftware/EPPlus */
         ExcelPackage package; // kütüphane için gerekli değişkenler -> ExcelSetup()
         ExcelWorksheet worksheet; // kütüphane için gerekli değişkenler
@@ -116,14 +117,20 @@ namespace SubuTetraTelemetri
                     motorSicakligiDataLabel.Text = Convert.ToInt32(atanacakVeriler[19], 16).ToString();
                     hizLabel.Text = Convert.ToInt32(atanacakVeriler[20], 16).ToString();
                     alinanYolLabel.Text = Convert.ToInt32(atanacakVeriler[21], 16).ToString();
-                    socDataLabel.Text = atanacakVeriler[22];
-                    sohDataLabel.Text = atanacakVeriler[23];
+                    socDataLabel.Text = Convert.ToInt32(atanacakVeriler[22], 16).ToString();
+                    sohDataLabel.Text = Convert.ToInt32(atanacakVeriler[23], 16).ToString();
                 }
                 if (excelKaydiCheck.Checked == true) // Kullanıcı excel kaydı yapmayı seçmişse
                 {
                     satirSayisi++; // Excel loglamasında 1 satır aşağı geçmesi gerekiyor üstüste binme olmaması için
                     ExcelLog(satirSayisi);
                 }
+            }
+            intVeri++;
+            if (intVeri == 20)
+            {
+                VeriGonder();
+                intVeri = 0;
             }
         }
         // String olarak okunan hexadecimal değerin decimale çevirilmesi ve arkasıdan 50'ye bölünerek gerçek değerin elde edilmesi
@@ -144,7 +151,6 @@ namespace SubuTetraTelemetri
             portDisconnectButton.Enabled = true; // Disconnect butonunun aktif edilmesi
             PortKonf(); // Port konfigürasyonunu gerçekleyecek fonksiyonun çağırılması
             timer1.Enabled = true; // Programın bağlantı açık olduğu sürece sürekli çalışmasını sağlayacak timer'ın aktif edilmesi
-            timer2.Enabled = true;
             if (excelKaydiCheck.Checked == true) // Kullanıcı eğer Excel loglamasını aktif ettiyse
             {
                 ExcelPackage.LicenseContext = OfficeOpenXml.LicenseContext.NonCommercial;
@@ -180,7 +186,6 @@ namespace SubuTetraTelemetri
         {
             port.Close(); // Port bağlantısının kapatılması
             timer1.Enabled = false; // Timer'ın kapatılması
-            timer2.Enabled = false;
             portBaglanButton.Enabled = true; // Bağlanma butonunun aktif edilmesi
             portDisconnectButton.Enabled = false; // Bağlantı kesme butonunun deaktif edilmesi
             if (excelKaydiCheck.Checked == true) // Log kaydı yapılan excel dosyasının kaydedilmesi
@@ -221,12 +226,12 @@ namespace SubuTetraTelemetri
             worksheet.Cells[1, 19].Value = "Pil 18";
             worksheet.Cells[1, 20].Value = "Pil 19";
             worksheet.Cells[1, 21].Value = "Pil 20";
-            worksheet.Cells[1, 22].Value = "Hız";
-            worksheet.Cells[1, 23].Value = "Sensor 1";
-            worksheet.Cells[1, 24].Value = "Sensor 2";
-            worksheet.Cells[1, 25].Value = "Sensor 3";
-            worksheet.Cells[1, 26].Value = "Sensor 4";
-            worksheet.Cells[1, 27].Value = "Sensor 5";
+            worksheet.Cells[1, 22].Value = "Sensor 1";
+            worksheet.Cells[1, 23].Value = "Sensor 2";
+            worksheet.Cells[1, 24].Value = "Sensor 3";
+            worksheet.Cells[1, 25].Value = "Sensor 4";
+            worksheet.Cells[1, 26].Value = "Sensor 5";
+            worksheet.Cells[1, 27].Value = "Hız";
             worksheet.Cells[1, 28].Value = "Alınan Yol";
             worksheet.Cells[1, 29].Value = "SoC";
             worksheet.Cells[1, 30].Value = "SoH";
@@ -307,11 +312,6 @@ namespace SubuTetraTelemetri
                 errors = process.StandardError.ReadToEnd(); // error varsa degiskene aktar
                 results = process.StandardOutput.ReadToEnd(); // sonuclari degiskene aktar
             }
-        }
-        // Her 1 saniyede 1 internete veri gonderecek olan timerin calismasi
-        private void timer2_Tick(object sender, EventArgs e)
-        {
-            VeriGonder();
         }
     } 
 }
